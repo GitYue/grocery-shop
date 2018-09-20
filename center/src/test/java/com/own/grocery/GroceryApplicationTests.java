@@ -1,4 +1,4 @@
-package com.own.gstest;
+package com.own.grocery;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class GsTestApplicationTests {
+public class GroceryApplicationTests {
 
 	@Test
 	public void contextLoads() {
