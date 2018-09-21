@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.own</groupId>
-	<artifactId>grocery</artifactId>
+	<artifactId>center</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>grocery</name>
+	<name>center</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -25,6 +25,12 @@
 	</properties>
 
 	<dependencies>
+		<!-- module -->
+		<dependency>
+			<groupId>com.own</groupId>
+			<artifactId>common</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>

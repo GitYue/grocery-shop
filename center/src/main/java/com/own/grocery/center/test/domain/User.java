@@ -1,4 +1,4 @@
-package com.own.grocery.test.domain;
+package com.own.grocery.center.test.domain;
 
 import lombok.Getter;
 import lombok.Setter;

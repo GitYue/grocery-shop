@@ -1,4 +1,4 @@
-package com.own.grocery.test.config;
+package com.own.grocery.center.test.config;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -13,7 +13,7 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import javax.sql.DataSource;
 
 @Configuration
-@MapperScan(basePackages = {"com.own.grocery.test.repository"},sqlSessionFactoryRef = "testSqlSessionFactory")
+@MapperScan(basePackages = {"com.own.grocery.center.test.repository"},sqlSessionFactoryRef = "testSqlSessionFactory")
 public class TestDbConfig {
 
     @Bean

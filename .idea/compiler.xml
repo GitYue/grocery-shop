@@ -9,6 +9,7 @@
         <module name="center" />
         <module name="common" />
         <module name="config" />
+        <module name="grocery" />
         <module name="gs-test" />
       </profile>
     </annotationProcessing>
@@ -16,6 +17,7 @@
       <module name="center" target="1.8" />
       <module name="common" target="1.5" />
       <module name="config" target="1.8" />
+      <module name="grocery" target="1.8" />
       <module name="grocery-shop" target="1.5" />
       <module name="gs-test" target="1.8" />
     </bytecodeTargetLevel>
