@@ -18,4 +18,12 @@ public class UserApplication {
         User detail = userMapper.detail();
         return detail;
     }
+
+    public User getUser2(){
+        User detail2 = new User();
+        detail2.setId(2);
+        detail2.setName("two");
+        detail2.setAge(22);
+        return detail2;
+    }
 }

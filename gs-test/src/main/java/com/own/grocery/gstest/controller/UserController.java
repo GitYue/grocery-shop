@@ -16,4 +16,9 @@ public class UserController {
     public String detail(){
         return userApplication.getUser().toString();
     }
+
+    @RequestMapping("detail2")
+    public String detail2(){
+        return userApplication.getUser2().toString();
+    }
 }

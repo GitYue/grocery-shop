@@ -1,4 +1,6 @@
-package com.own.grocery.center.test.config;
+package com.own.grocery.center.test2.config;
+
+import org.springframework.context.annotation.Configuration;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -7,8 +9,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
@@ -20,26 +20,25 @@ import java.util.Collections;
 import java.util.List;
 
 @Configuration
-@MapperScan(basePackages = {"com.own.grocery.center.test.repository"},sqlSessionFactoryRef = "testSqlSessionFactory")
-public class TestDbConfig {
+@MapperScan(basePackages = {"com.own.grocery.center.test.repository"},sqlSessionFactoryRef = "test2SqlSessionFactory")
+public class Test2DbConfig {
 
     @Bean
-    @ConfigurationProperties(prefix = "datasource.test")
-    public DataSource testDataSource(){
+    @ConfigurationProperties(prefix = "datasource.test2")
+    public DataSource test2DataSource(){
         return DataSourceBuilder.create().build();
     }
 
     @Bean
-    public DataSourceTransactionManager testTransactionManager(@Qualifier("testDataSource") DataSource dataSource){
+    public DataSourceTransactionManager test2TransactionManager(@Qualifier("test2DataSource") DataSource dataSource){
         return new DataSourceTransactionManager(dataSource);
     }
 
-    @Primary
     @Bean
-    public SqlSessionFactory testSqlSessionFactory(@Qualifier("testDataSource") DataSource dataSource) throws Exception{
+    public SqlSessionFactory test2SqlSessionFactory(@Qualifier("test2DataSource") DataSource dataSource) throws Exception{
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
 
-        String mapperXmlPath = "classpath*:mapping/test/*/*Mapper.xml";
+        String mapperXmlPath = "classpath*:mapping/test2/*Mapper.xml";
         List<Resource> resourceList = new ArrayList<>();
         ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         Collections.addAll(resourceList, resolver.getResources(mapperXmlPath));
