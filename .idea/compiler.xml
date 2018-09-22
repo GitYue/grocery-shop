@@ -10,7 +10,7 @@
         <module name="common" />
         <module name="config" />
         <module name="grocery" />
-        <module name="gs-test" />
+        <module name="web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -20,6 +20,8 @@
       <module name="grocery" target="1.8" />
       <module name="grocery-shop" target="1.5" />
       <module name="gs-test" target="1.8" />
+      <module name="gs-test2" target="1.8" />
+      <module name="web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

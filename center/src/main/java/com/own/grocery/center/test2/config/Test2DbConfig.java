@@ -20,7 +20,7 @@ import java.util.Collections;
 import java.util.List;
 
 @Configuration
-@MapperScan(basePackages = {"com.own.grocery.center.test.repository"},sqlSessionFactoryRef = "test2SqlSessionFactory")
+@MapperScan(basePackages = {"com.own.grocery.center.test2.repository"},sqlSessionFactoryRef = "test2SqlSessionFactory")
 public class Test2DbConfig {
 
     @Bean
@@ -38,7 +38,7 @@ public class Test2DbConfig {
     public SqlSessionFactory test2SqlSessionFactory(@Qualifier("test2DataSource") DataSource dataSource) throws Exception{
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
 
-        String mapperXmlPath = "classpath*:mapping/test2/*Mapper.xml";
+        String mapperXmlPath = "classpath*:mapping/test2/*/*Mapper.xml";
         List<Resource> resourceList = new ArrayList<>();
         ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         Collections.addAll(resourceList, resolver.getResources(mapperXmlPath));

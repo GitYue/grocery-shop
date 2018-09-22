@@ -1,4 +1,4 @@
-package com.own.grocery.gstest.application;
+package com.own.grocery.test.application;
 
 import com.own.grocery.center.test.domain.User;
 import com.own.grocery.center.test.repository.UserMapper;

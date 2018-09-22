@@ -10,7 +10,8 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>gs-test</module>
+        <module>web</module>
+        <module>center</module>
         <module>common</module>
     </modules>
 </project>
