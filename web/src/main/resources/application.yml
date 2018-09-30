@@ -1,3 +1,5 @@
+#公网IP：118.25.139.238
+
 server:
   port: 8080
   #servlet:
