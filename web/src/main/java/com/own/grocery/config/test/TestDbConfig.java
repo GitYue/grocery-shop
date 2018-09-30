@@ -1,5 +1,6 @@
-package com.own.grocery.center.test.config;
+package com.own.grocery.config.test;
 
+import com.own.grocery.config.common.BaseDbConfig;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
@@ -21,7 +22,7 @@ import java.util.List;
 
 @Configuration
 @MapperScan(basePackages = {"com.own.grocery.center.test.repository"},sqlSessionFactoryRef = "testSqlSessionFactory")
-public class TestDbConfig {
+public class TestDbConfig extends BaseDbConfig{
 
     @Bean
     @ConfigurationProperties(prefix = "datasource.test")
@@ -37,16 +38,6 @@ public class TestDbConfig {
     @Primary
     @Bean
     public SqlSessionFactory testSqlSessionFactory(@Qualifier("testDataSource") DataSource dataSource) throws Exception{
-        SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
-
-        String mapperXmlPath = "classpath*:mapping/test/*/*Mapper.xml";
-        List<Resource> resourceList = new ArrayList<>();
-        ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-        Collections.addAll(resourceList, resolver.getResources(mapperXmlPath));
-        Resource[] resources = resourceList.toArray(new Resource[0]);
-
-        factoryBean.setMapperLocations(resources);
-        factoryBean.setDataSource(dataSource);
-        return factoryBean.getObject();
+        return instanceSqlSessionFactory(dataSource,"test");
     }
 }
