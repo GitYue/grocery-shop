@@ -21,4 +21,9 @@ public class UserController {
     public String detail2(){
         return userApplication.getUser2().toString();
     }
+
+    @RequestMapping("detail3")
+    public String detail3(){
+        return "detail 13 ====";
+    }
 }
