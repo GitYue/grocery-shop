@@ -20,7 +20,7 @@ datasource:
 logging:
   path: /usr/own-develop/logs
   level:
-    root: debug
+    root: info
     org:
       springframework:
         web: debug
