@@ -16,3 +16,11 @@ datasource:
     username: root
     password: zy514520
     driver-class-name: com.mysql.jdbc.Driver
+
+logging:
+  path: /usr/own-develop/logs
+  level:
+    root: debug
+    org:
+      springframework:
+        web: debug
