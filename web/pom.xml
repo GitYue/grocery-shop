@@ -75,8 +75,10 @@
 
 		<resources>
 			<resource>
-				<directory>src/main/resources/mapping</directory>
+				<directory>src/main/resources</directory>
 				<includes>
+					<include>**/*.yml</include>
+					<include>**/*.properties</include>
 					<include>**/*.xml</include>
 				</includes>
 			</resource>
