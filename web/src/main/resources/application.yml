@@ -7,12 +7,12 @@ server:
 
 datasource:
   test:
-    jdbc-url: jdbc:mysql://127.0.0.1:3306/test?useSSL=false
+    jdbc-url: jdbc:mysql://118.25.139.238:3306/test?useSSL=false
     username: root
     password: zy514520
     driver-class-name: com.mysql.jdbc.Driver
   test2:
-    jdbc-url: jdbc:mysql://127.0.0.1:3306/test2?useSSL=false
+    jdbc-url: jdbc:mysql://118.25.139.238:3306/test2?useSSL=false
     username: root
     password: zy514520
     driver-class-name: com.mysql.jdbc.Driver
